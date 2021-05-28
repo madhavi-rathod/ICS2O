@@ -1,0 +1,320 @@
+<html>
+
+
+<title>
+Game
+</title>
+
+
+<head>
+  
+<style>
+
+body {background-color: #d7f3f7;}
+
+a {text-decoration: none;
+color: black;}
+
+button {
+ width:50px;
+ height:50px;
+}
+
+#picBox {
+
+width:300px;
+height:500px;
+float:right;
+margin-right: 80px;
+
+}
+
+</style>
+
+
+<script>
+
+var dashes ="";
+
+var countries = ['Canada', 'America', 'Spain', 'Cuba', 'Brazil', 'Argentina', 'Switzerland', 'Italy', 'India', 'Mongolia'];
+var randomNumber = Math.floor(10 * Math.random() + 0);
+var country = countries[randomNumber];
+country = country.toUpperCase();
+
+var hints = ['The country with the maple leaf on its flag', 'It has 50 states', 'The country with the capital Madrid', 'The largest island in all of the Carribean', 
+'It contains almost 60% of the Amazon rain forest', 'A country in South America', 'The alps make up around 65% of this country', 'The leaning tower of pizza is located in this country',
+'A country that is associated with cricket', 'The most sparsely populated country in the world'];
+
+var displayHint = "";
+
+
+
+function random () {
+
+prompt("Please enter your name");
+
+document.getElementById('word').onclick = null;
+
+
+for (i=0; i<country.length; i++) {
+dashes += "_"
+}
+
+document.getElementById('p5').innerHTML = "The mystery word: " + dashes;
+
+
+for(x=1;x<=26;x++){
+	//use the createElement function to create known HTML elements
+    var btn = document.createElement("BUTTON");	
+	var myP = document.createElement("br");
+	
+    var letter = String.fromCharCode(x+64);
+    var t = document.createTextNode(letter);
+	buttonArray.push(btn);
+	//add the text stored in 't' to the our button variable
+    btn.appendChild(t);
+	//give the btn an id to make it easy to access later
+    btn.id = letter;
+	//this is how to add an event to the button -- name the event and 
+	//then include the function you want it to perform
+    btn.addEventListener("click", checkLetter);
+    btn.addEventListener("mouseover", changeColor);
+    btn.addEventListener("mouseout", changeColor2);
+	btn.addEventListener("click", stopLetter);
+    //add the btn to the page
+	  document.body.appendChild(btn);
+	//add a line break 'myP' after 10 buttons
+	  if (x%10==0) {
+	    document.body.appendChild(myP);
+	}
+    }
+	document.getElementById('p1').innerHTML += 5;
+}	
+
+	var livesLeft = 5;
+	var error = 0;
+
+	var wins = 0;
+	var losses = 0;
+
+function checkLetter(){
+	//this refers to the object that called this function
+	alert("You clicked: " + this.id);
+	document.getElementById("p4").innerHTML += this.id;
+	
+	var countryWord = country;
+	var countryNew ="";
+	
+	var images = ['Images/fourLives.png', 'Images/threeLives.png', 'Images/twoLives.png', 'Images/oneLife.png', 'Images/dead.png'];
+
+	if (countryWord.includes(this.id)) {
+		for (i=0; i<countryWord.length; i++) {
+			var characterValue = countryWord.charAt(i);
+				if (this.id == characterValue) {
+				countryNew += countryWord.charAt(i);
+				}
+				else {
+				countryNew += dashes.charAt(i);
+				}
+		}
+		dashes = countryNew;
+		
+		document.getElementById('p5').innerHTML = "The mystery word: " + dashes;
+	}
+	else {
+	livesLeft--;
+	error++;
+		if (livesLeft>0) {
+		document.getElementById('picBox').src = images[error-1];
+		document.getElementById('p1').innerHTML = "Lives left: " + livesLeft;
+		}
+		else if (livesLeft<=0) {
+		document.getElementById('picBox').src = images[4];
+		document.getElementById('p1').innerHTML = "Unfortunatley, you have lost. Click to play again!";
+		}
+		
+	}
+	if (dashes == country) {
+	wins++
+	document.getElementById('p2').innerHTML = "Wins: " + wins;
+	}
+	if (livesLeft == 0) {
+	losses++
+	document.getElementById('p3').innerHTML = "Losses: " + losses;
+	for (x=0; x<buttonArray.length; x++) {
+		buttonArray[x].disabled = true;
+		buttonArray[x].style.backgroundColor = "#5ad6cf";
+	}
+	}
+	
+}
+
+function changeColor (){
+	this.style.backgroundColor= "#90dedb";
+}
+
+function changeColor2 (){
+	this.style.backgroundColor= "#a0bde8";
+}
+ 
+function stopLetter () {
+	this.disabled = true;
+	this.style.backgroundColor="#5ad6cf";
+}
+
+function showHint() {
+	displayHint = hints[randomNumber]; //the hint gets chosen through the random number which is the same as the one for choosing the word
+	document.getElementById("hint").innerHTML = "Hint: " + displayHint;
+}
+
+var buttonArray = [];
+
+function playAgain () {
+	for (x=0; x<buttonArray.length; x++) {
+		buttonArray[x].disabled = false;
+		buttonArray[x].style.backgroundColor = "#e6f7f6";
+	}
+livesLeft = 5;
+error = 0;
+
+document.getElementById('p1').innerHTML = "Lives left: ";
+document.getElementById('p4').innerHTML = "Letters picked: ";
+document.getElementById('picBox').src = "Images/startHangman.png";
+
+randomNumber = Math.floor(10 * Math.random() + 0);
+country = countries[randomNumber];
+country = country.toUpperCase();
+
+dashes=""
+
+	for (i=0; i<=country.length; i++) {
+		dashes += "_"
+	}
+	
+	displayHint = hints[randomNumber];
+	document.getElementById("hint").innerHTML = "Hint: ";
+	
+document.getElementById('p5').innerHTML = "The mystery word: " + dashes;
+
+}
+
+</script>
+
+</head>
+
+<body>
+
+<table border="1" cellpadding="3" width="1525">
+
+<tr>
+<td width="200" align="center">
+<b>
+<font size="+1">
+<a href="hangman.html">
+Madhavi's Hangman
+</a>
+</font>
+</b>
+</td>
+
+<td width="525">
+</td>
+
+<td width="200">
+<a href="instructions.html">
+Instructions
+</a>
+</td>
+
+<td width="200">
+<a href="help.html">
+Help
+</a>
+</td>
+
+<td width="200">
+<a href="game.html">
+The Game
+</a>
+</td>
+</tr>
+
+</table>
+
+
+</body>
+
+
+<body>
+
+<h1 align="center">
+Click Go to Guess the Country
+</h1>
+
+<table border="0" cellpadding="3">
+
+<tr>
+<td>
+<button type="button" id="word" class="buttonOne" onClick="random ()">
+Go!
+</button>
+</td>
+
+<td>
+<button type="button" class="buttonOne" onClick="playAgain ()">
+Play Again
+</button>
+</td>
+
+<td>
+<button type="button" class="buttonOne" onClick="showHint ()">
+Hint
+</button>
+</tr>
+
+</table>
+
+
+<table align="right">
+
+<tr>
+
+<td>
+<img src="Images/startHangman.png" style="width: 150px; height: 225px;" id="picBox">
+</img>
+</td>
+
+<td width="275">
+</td>
+
+</tr>
+
+</table>
+
+<p id="p1">
+Lives Left:
+</p>
+
+<p id="p2">
+Wins:
+</p>
+
+<p id="p3">
+Losses:
+</p>
+
+<p id ="p4">
+Letters picked:
+</p>
+
+<p id="p5">
+</p>
+
+<p id="hint">
+</p>
+
+
+</body>
+
+
+</html>

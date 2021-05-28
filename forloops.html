@@ -19,53 +19,47 @@ body {text-align: center;}
 
 function one () {
 
-var everyNumberOne = document.getElementById("everyNumberOne").value;
-var everyNumberTwo = document.getElementById("everyNumberTwo").value;
+var counterStartOne = document.getElementById("counterStartOne").value;
+var counterEndOne = document.getElementById("counterEndOne").value;
 
-for (i == everyNumberOne; everyNumberOne <= everyNumberTwo; i=i++) {
-document.getElementById("answerOne").innerHTML = i;
+for (counterStartOne == 1; counterStartOne <= counterEndOne; counterStartOne++) {
+document.getElementById("answerOne").innerHTML = counter;
 }
+
 
 }
 
 function two () {
 
-var evenNumberOne = document.getElementById("evenNumberOne").value;
-var evenNumberTwo = document.getElementById("evenNumberTwo").value;
+var counterStartTwo = document.getElementById("counterStartTwo").value;
+var counterEndTwo = document.getElementById("counterEndTwo").value;
 
-for (i == evenNumberOne; evenNumberOne <= evenNumberTwo; i = (i-2)){
-document.getElementById("answerTwo").innerHTML = i;
+
+
+
 }
-
-}
-
 
 function three () {
 
-var highNumberOne = document.getElementById("highNumberOne").value;
-var highNumberTwo = document.getElementById("highNumberTwo").value;
-
-for (i == highNumberTwo; highNumberOne >= highNumberTwo; i = (i-2)) {
-
-}
+var counterStartThree = document.getElementById("counterStartThree").value;
+var counterEndThree = document.getElementById("counterEndThree").value;
 
 }
 
 function four () {
 
-var sumNumberOne = document.getElementById("sumNumberOne").value;
-var sumNumberTwo = document.getElementById("sumNumberTwo").value;
-
-for (i
+var sumOne = document.getElementById("sumOne").value;
+var sumTwo = document.getElementById("sumTwo").value;
 
 }
-
 
 function five () {
 
-var wordNumberOne = document.getElementById("wordNumberOne").value;
+var wordOne = document.getElementById("wordOne").value;
+
 
 }
+
 </script>
 
 </head>
@@ -74,42 +68,41 @@ var wordNumberOne = document.getElementById("wordNumberOne").value;
 <body>
 
 <h1>
-Counter Loops
+Counter One
 </h1>
 
-<table border="0" align="center" cellpadding="3">
+<table border="0" cellpadding="5" align="center">
 
 <tr>
 <td colspan="2" align="center" style="border-bottom: 1px solid black">
 <font size="+1">
 <b>
-Every Number Counter
+Please enter a start and end number
 </b>
 </font>
 </td>
-<tr>
+</tr>
 
-<tr width="500">
-<td width="250" align="center">
+<tr width="300">
+<td width="150">
 Start:
 </td>
 <td>
-<input type="text" id="everyNumberOne">
-</td>
-<tr>
-
-<tr width="500">
-<td width="250" align="center">
-Stop:
-</td>
-<td>
-<input type="text" id="everyNumberTwo">
+<input type="text" id="counterStartOne">
 </td>
 </tr>
 
-<tr>
+<tr width="300">
+<td width="150">
+End:
+</td>
+<td>
+<input type="text" id="counterEndOne">
+</td>
+
+<tr width="300">
 <td colspan="2" align="center">
-<button type="button" onClick="one()">
+<button type="button" onClick="one ()">
 Submit
 </button>
 </td>
@@ -120,44 +113,49 @@ Submit
 <p id="answerOne">
 </p>
 
+
 </body>
 
 
 <body>
 
-<table border="0" align="center" cellpadding="3">
+<h1>
+Counter Two
+</h1>
+
+<table border="0" cellpadding="5" align="center">
 
 <tr>
-<td colspan="2" align="center" style="border-bottom: 1px solid black">
-<font size="+1">
+<td colspan="2" align="center" style="border-bottom: solid 1px black">
 <b>
-Even Number Counter
-</b>
+<font size="+1">
+Please enter a start and end number
 </font>
+</b>
 </td>
 </tr>
 
-<tr width="500">
-<td width="250" align="center">
+<tr width="300">
+<td width="150">
 Start:
 </td>
 <td>
-<input type="text" id="evenNumberOne">
+<input type="text" id="counterStartTwo">
 </td>
 </tr>
 
-<tr width="500">
-<td width="250" align="center">
-Stop:
+<tr width="300">
+<td width="150">
+End:
 </td>
 <td>
-<input type="text" id="evenNumberTwo">
+<input type="text" id="counterEndTwo">
 </td>
 </tr>
 
-<tr>
+<tr width="300">
 <td colspan="2" align="center">
-<button type="button" onClick="two()">
+<button type="button" onClick="two ()">
 Submit
 </button>
 </td>
@@ -173,38 +171,42 @@ Submit
 
 <body>
 
-<table border="0" align="center" cellpadding="3">
+<h1>
+Counter Three
+</h1>
+
+<table border="0" cellpadding="5" align="center">
 <tr>
-<td colspan="2" align="center" style="border-bottom: 1px solid black">
-<font size="+1">
+<td colspan="2" align="center" style="border-bottom: solid 1px black">
 <b>
-High/low Counter
-</b>
+<font size="+1">
+Please enter a start and end number
 </font>
+</b>
 </td>
 </tr>
 
-<tr width="500">
-<td width="250" align="center">
+<tr width="300">
+<td width="150">
 Start:
 </td>
 <td>
-<input type="text" id="highNumberOne">
-</td>
-<tr>
-
-<tr width="500">
-<td width="250" align="center">
-Stop:
-</td>
-<td>
-<input type="text" id="highNumberTwo">
+<input type="text" id="counterStartThree">
 </td>
 </tr>
 
-<tr>
+<tr width="300">
+<td width="150">
+End:
+</td>
+<td>
+<input type="text" id="counterEndThree">
+</td>
+</tr>
+
+<tr width="300">
 <td colspan="2" align="center">
-<button type="button" onClick="three()">
+<button type="button" onClick="three ()">
 Submit
 </button>
 </td>
@@ -221,42 +223,41 @@ Submit
 <body>
 
 <h1>
-Sum Loops
+Sum
 </h1>
 
-
-<table border="0" align="center" cellpadding="3">
+<table border="0" cellpadding="5" align="center">
 <tr>
-<td colspan="2" align="center" style="border-bottom: 1px solid black">
-<font size="+1">
+<td colspan="2" align="center" style="border-bottom: solid 1px black">
 <b>
-Sum Between
-</b>
+<font size="+1">
+Please enter two numbers
 </font>
+</b>
 </td>
 </tr>
 
-<tr width="500">
-<td width="250" align="center">
-Start:
+<tr width="300">
+<td width="150">
+One:
 </td>
 <td>
-<input type="text" id="sumNumberOne">
+<input type="text" id="sumOne">
 </td>
 </tr>
 
-<tr width="500">
-<td width="250" align="center">
-Stop:
+<tr width="300">
+<td width="150">
+Two:
 </td>
 <td>
-<input type="text" id="sumNumberTwo">
+<input type="text" id="sumTwo">
 </td>
 </tr>
 
 <tr>
 <td colspan="2" align="center">
-<button type="button" onClick="four()">
+<button type="button" onClick="four ()">
 Submit
 </button>
 </td>
@@ -273,33 +274,33 @@ Submit
 <body>
 
 <h1>
-Num Loops
+Num Words
 </h1>
 
-<table border="0" align="center" cellpadding="3">
-
+<table border="0" cellpadding="5" align="center">
 <tr>
 <td colspan="2" align="center" style="border-bottom: 1px solid black">
 <font size="+1">
 <b>
-Count words
+Please enter a word
 </b>
 </font>
 </td>
 </tr>
 
-<tr width="500">
-<td width="250" align="center">
-Sentence:
+
+<tr width="300">
+<td width="150">
+Word:
 </td>
 <td>
-<input type="input" id="wordNumberOne">
+<input type="text" id="wordOne">
 </td>
 </tr>
 
 <tr>
 <td colspan="2" align="center">
-<button type="button" onClick="five()">
+<button type="button" onClick="five ()">
 Submit
 </button>
 </td>
