@@ -1,0 +1,110 @@
+<html>
+
+<title>
+Selection Six
+</title>
+
+<head>
+
+<script>
+
+alert("Welcome to Random Math Problem Generator. You will be asked to answer 3 addition or subtraction questions. Try your best and good luck!");
+
+var integerOne = Math.floor(15 * Math.random() + 1);
+var integerTwo = Math.floor(15 * Math.random() + 1);
+var randomOperation = Math.floor(2 * Math.random() + 1);
+var answer, userInput;
+
+if (randomOperation == 1) {
+userInput = prompt("What is " + integerOne + " + " + integerTwo + "?");
+answer = (integerOne + integerTwo);
+}
+
+else if (randomOperation == 2) {
+userInput = prompt("What is " + integerOne + " - " + integerTwo + "?");
+answer = (integerOne - integerTwo);
+}
+
+if (userInput == answer) {
+alert("You are correct!")
+} else {
+alert("Sorry you are incorrect. Your answer was " + userInput + " but the correct answer is " + answer);
+}
+
+var integerThree = Math.floor(15 * Math.random() + 1);
+var integerFour = Math.floor(15 * Math.random() + 1);
+var randomOperation2 = Math.floor(2 * Math.random() + 1);
+var answer2, userInput2;
+
+if (randomOperation2 == 1) {
+userInput2 = prompt("What is " + integerThree + " + " + integerFour + "?");
+answer2 = (integerThree + integerFour);
+}
+
+else if (randomOperation2 == 2) {
+userInput2 = prompt("What is " + integerThree + " - " + integerFour + "?");
+answer2 = (integerThree - integerFour);
+}
+
+if (userInput2 == answer2) {
+alert("You are correct!")
+} else {
+alert("Sorry you are incorrect. Your answer was " + userInput2 + " but the correct answer is " + answer2);
+}
+
+var integerFive = Math.floor(15 * Math.random() + 1);
+var integerSix = Math.floor(15 * Math.random() + 1);
+var randomOperation3 = Math.floor(2 * Math.random() + 1);
+var answer3, userInput3;
+
+if (randomOperation3 == 1) {
+userInput3 = prompt("What is " + integerFive + " + " + integerSix + "?");
+answer3 = (integerFive + integerSix);
+}
+
+else if (randomOperation3 == 2) {
+userInput3 = prompt("What is " + integerFive + " - " + integerSix + "?");
+answer3 = (integerFive - integerSix);
+}
+
+if (userInput3 == answer3) {
+alert("You are correct!")
+} else {
+alert("Sorry you are incorrect. Your answer was " + userInput3 + " but the correct answer is " + answer3);
+}
+
+if ((userInput == answer) && (userInput2 == answer2) && (userInput3 == answer3)) {
+document.write("<h3> Random Math Probelm Generator </h3>");
+document.write("<br> Your first answer was " + userInput + ". <br> The correct answer is " + answer + ".");
+document.write("<br> <br> Your second answer was " + userInput2 + ". <br> The correct answer is " + answer2 + ".");
+document.write("<br> <br> Your third answer was " + userInput3 + ". <br> The correct answer is " + answer3 + ".");
+document.write("<br> <br> You correctly answered all three questions! Congratulations, you got 100%");
+}
+else if ((!(userInput == answer)) && (!(userInput2 == answer2)) && (!(userInput3 == answer3))) {
+document.write("<h3> Random Math Problem Generator </h3>");
+document.write("<br> Your first answer was " + userInput + ". <br> The correct answer is " + answer + ".");
+document.write("<br> <br> Your second answer was " + userInput2 + ". <br> The correct answer is " + answer2 + ".");
+document.write("<br> <br> Your third answer was " + userInput3 + ". <br> The correct answer is " + answer3 + ".");
+document.write("<br> <br> Unfortunatley you did not correctly answer all three of the questions so you got a 0%");
+}
+else if ((!(userInput == answer) && !(userInput2 == answer2) && (userInput3 == answer3)) || (!(userInput == answer) && (userInput2 == answer2) && !(userInput3 == answer3)) || ((userInput == answer) && !(userInput2 == answer2) &&  !(userInput3 == answer3))) {
+document.write("<h3> Random Math Problem Generator </h3>");
+document.write("<br> Your first answer was " + userInput + ". <br> The correct answer is " + answer + ".");
+document.write("<br> <br> Your second answer was " + userInput2 + ". <br> The correct answer is " + answer2 + ".");
+document.write("<br> <br> Your third answer was " + userInput3 + " . <br> The correct answer is " + answer3 + ".");
+document.write("<br> <br> Unfortunatley you only answered one question correctly so you got a 33%");
+}
+else if ((!(userInput == answer) && (userInput2 == answer2) && (userInput3 == answer3)) || ((userInput == answer) && !(userInput2 == answer2) && (userInput3 == answer3)) || ((userInput == answer) && (userInput2 == answer2) && !(userInput3 == answer3))) {
+document.write("<h3> Random Math Problem Generator </h3>");
+document.write("<br> Your first answer was " + userInput + ". <br> The correct answer is " + answer + ".");
+document.write("<br> <br> Your second answer was " + userInput2 + ". <br> The correct answer is " + answer2 + ".");
+document.write("<br> <br> Your third answer was " + userInput3 + ". <br> The correct answer is " + answer3 + ".");
+document.write("<br> <br> You only answered two questions correctly so you got a 66%");
+}
+
+</script>
+
+</head>
+
+
+</html>

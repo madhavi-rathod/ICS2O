@@ -1,0 +1,210 @@
+<html>
+
+
+<head>
+
+<title>
+Calculator
+</title>
+
+<script>
+var num1 =0;
+var num2 =0;
+var num3 =0;
+var signChoice = "";
+
+function addNum(num){
+document.getElementById("screen").value = document.getElementById("screen").value + num;
+}
+
+function setSign(sign){
+signChoice = sign;
+num1 = document.getElementById("screen").value;
+document.getElementById("screen").value ="";
+}
+
+function equalPressed() {
+num2= document.getElementById("screen").value;
+if (signChoice =="+") {
+document.getElementById("screen").value = Number(num1) + Number(num2);
+}
+else if (signChoice == "-") {
+document.getElementById("screen").value = Number(num1) - Number(num2);
+}
+else if (signChoice == "x") {
+document.getElementById("screen").value = Number(num1) * Number(num2);
+}
+else if (signChoice =="/") {
+document.getElementById("screen").value = Number(num1) / Number(num2);
+}
+else if (signChoice == "sin") {
+document.getElementById("screen").value = Math.sin(Number(num1));
+}
+else if (signChoice == "cos") {
+document.getElementById("screen").value = Math.cos(Number(num1));
+}
+else if (signChoice == "tan") {
+document.getElementById("screen").value = Math.tan(Number(num1));
+}
+else if (signChoice == "root") {
+document.getElementById("screen").value = Math.sqrt(Number(num1));
+}
+else if (signChoice == "%") {
+document.getElementById("screen").value = Number(num1) % Number(num2);
+}
+}
+
+</script>
+
+</head>
+
+
+<body>
+
+<h1>
+Calculator!
+</h1>
+
+<form>
+
+<table border="1" align="center" cellpadding="7">
+
+<tr>
+<td colspan="6">
+<input type="text" id="screen" style="width: 100%" />
+</td>
+</tr>
+
+<tr>
+<td align="center" colspan="2">
+<button type="button" onClick="setSign('sin')" id="bOperation">
+Sin
+</button>
+</td>
+<td align="center" colspan="2"> 
+<button type="button" onClick="setSign('cos')" id="bOperation">
+Cos
+</button>
+</td>
+<td align="center" colspan="2">
+<button type="button" onClick="setSign('tan')" id="bOperation">
+Tan
+</button>
+</td>
+
+</tr>
+
+<tr>
+<td align="center" rowspan="3"> 
+<button type="reset">
+Reset
+</button>
+</td>
+<td>
+<button type="button" onClick="addNum(7)" id="bNum">
+7
+</button>
+</td>
+<td>
+<button type="button" onClick="addNum(8)" id="bNum">
+8
+</button>
+</td>
+<td>
+<button type="button" onClick="addNum(9)" id="bNum">
+9
+</button>
+</td>
+<td>
+<button type="button" onClick="setSign('%')" id="bOperation">
+%
+</button> 
+</td>
+<td>
+<button type="button" onClick="setSign('root')" id="bOperation">
+√ 
+</button>
+</td>
+</tr>
+
+<tr>
+<td> 
+<button type="button" onClick="addNum(4)" id="bNum">
+4 
+</button>
+</td>
+<td>
+<button type="button" onClick="addNum(5)" id="bNum">
+5 
+</button>
+</td>
+<td>
+<button type="button" onClick="addNum(6)" id="bNum">
+6
+</button>
+</td>
+<td>
+<button type="button" onClick="setSign('x')" id="bOperation">
+X
+</button>
+</td>
+<td>
+<button type="button" onClick="setSign('/')" id="bOperation">
+/ 
+</button>
+</td>
+</tr>
+
+<tr>
+<td>
+<button type="button" onclick="addNum(1)" id="bNum">
+1
+</button>
+</td>
+<td>
+<button type="button" onclick="addNum(2)" id="bNum">
+2
+</button>
+</td>
+<td>
+<button type="button" onclick="addNum(3)" id="bNum">
+3
+</button>
+</td>
+<td rowspan="2">
+<button type="button" onclick="setSign('+')" id="bOperation">
++
+</button>
+</td>
+<td align="center"> 
+<button type="button" onClick="setSign('-')" id="bOperation">
+-
+</button>
+</td>
+</tr>
+
+<tr>
+<td align="center" colspan="2"> 
+<button type="button" onClick="addNum(0)" id="bNum">
+0
+</button>
+</td>
+<td colspan="2">
+<button type="button" onClick="addNum('.')" id="bNum">
+.
+</button>
+</td>
+<td>
+<button type="button" onclick="equalPressed()" id="bEqual">
+=
+</button>
+</td>
+</tr>
+
+</table>
+
+</form>
+
+</body>
+
+</html> 

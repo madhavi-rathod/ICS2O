@@ -1,0 +1,55 @@
+<html>
+
+
+<title>
+Functions Two
+</title>
+
+
+<style>
+
+body {text-align: center;}
+
+</style>
+
+
+<head>
+
+<script>
+
+function random () {
+
+var words = ["Math", "English", "Science", "French"];
+var subjects = words[Math.floor(Math.random() * words.length)];
+
+document.getElementById("secret").innerHTML = "Your secret word is " + subjects;
+
+}
+
+
+</script>
+
+</head>
+
+
+<body>
+
+<h1>
+Secret Word Generator
+</h1>
+
+<form>
+
+<button type="button" onClick="random ()">
+Click to find the secret word
+</button>
+
+</form>
+
+<p id="secret">
+</p>
+
+</body>
+
+
+</html>

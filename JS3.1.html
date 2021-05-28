@@ -1,0 +1,62 @@
+<html>
+
+
+<title>
+One Dollar
+</title>
+
+
+<body>
+
+<script>
+
+/*
+
+var x=Math.floor(15 * Math.random() +12); Number between 12 and 26
+
+var x=Math.floor(50 * Math.random() +1); Number between 1 and 50
+
+var x=Math.floor(20 * Math.random() -10); Number between -10 and 10`	
+
+var x=Math.floor(81 * Math.random() -67); Number between -67 and 14
+
+var x= 18 % 4; 18 divided by 4 and then remainder (which is 2)
+
+var x= 18/4; 18 divided by 4 (decimal number)
+
+var x= 11**2; (11 squared)
+
+cents=prompt("Stuff");
+
+document.write(x); Always needed to output what the x value is in the var earlier
+
+*/
+
+
+cents=prompt("Please enter a number value that is less than 100");
+
+document.write("You will have ");
+document.write(Math.floor(cents / 25));
+document.write(" quarters ");
+
+var remaining = (cents % 25);
+
+document.write(Math.floor(remaining / 10));
+document.write(" dimes ");
+
+var remaining = (remaining % 10);
+
+document.write(Math.floor(remaining / 5));
+document.write(" nickels and ");
+
+var remaining = (remaining % 5);
+
+document.write(Math.floor(remaining / 1));
+document.write(" pennies ");
+
+</script>
+
+</body>
+
+
+</html>

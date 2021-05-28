@@ -1,0 +1,61 @@
+<html>
+
+<title>
+String One
+</title>
+
+<style>
+
+body {text-align: center;}
+
+</style>
+
+<head>
+
+<script>
+
+function word () {
+
+var word = document.getElementById("random").value;
+var vowelPartOne = word.substring(1);
+var vowelPartTwo = word.substring(0,1);
+
+if (vowelPartTwo == "a" || vowelPartTwo == "e" || vowelPartTwo == "i" || vowelPartTwo == "o" || vowelPartTwo == "u" ||
+vowelPartTwo == "A" || vowelPartTwo == "E" || vowelPartTwo == "I" || vowelPartTwo == "O" || vowelPartTwo == "U") {
+document.getElementById("answer").innerHTML = vowelPartOne + vowelPartTwo;
+}
+
+else {
+document.getElementById("answer").innerHTML = word + "ly";
+}
+}
+
+
+</script>
+
+</head>
+
+
+<body>
+
+<h1>
+Please enter a word
+</h1>
+
+<form>
+
+<input type="text" id="random">
+
+<button type="button" onclick="word()">
+Submit
+</button>
+
+</form>
+
+<p id="answer">
+</p>
+
+</body>
+
+
+</html>

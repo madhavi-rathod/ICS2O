@@ -1,0 +1,316 @@
+<html>
+
+
+<title>
+For Loops
+</title>
+
+
+<style>
+
+body {text-align: center;}
+
+</style>
+
+
+<head>
+
+<script>
+
+function one () {
+
+var everyNumberOne = document.getElementById("everyNumberOne").value;
+var everyNumberTwo = document.getElementById("everyNumberTwo").value;
+
+for (i == everyNumberOne; everyNumberOne <= everyNumberTwo; i=i++) {
+document.getElementById("answerOne").innerHTML = i;
+}
+
+}
+
+function two () {
+
+var evenNumberOne = document.getElementById("evenNumberOne").value;
+var evenNumberTwo = document.getElementById("evenNumberTwo").value;
+
+for (i == evenNumberOne; evenNumberOne <= evenNumberTwo; i = (i-2)){
+document.getElementById("answerTwo").innerHTML = i;
+}
+
+}
+
+
+function three () {
+
+var highNumberOne = document.getElementById("highNumberOne").value;
+var highNumberTwo = document.getElementById("highNumberTwo").value;
+
+for (i == highNumberTwo; highNumberOne >= highNumberTwo; i = (i-2)) {
+
+}
+
+}
+
+function four () {
+
+var sumNumberOne = document.getElementById("sumNumberOne").value;
+var sumNumberTwo = document.getElementById("sumNumberTwo").value;
+
+for (i
+
+}
+
+
+function five () {
+
+var wordNumberOne = document.getElementById("wordNumberOne").value;
+
+}
+</script>
+
+</head>
+
+
+<body>
+
+<h1>
+Counter Loops
+</h1>
+
+<table border="0" align="center" cellpadding="3">
+
+<tr>
+<td colspan="2" align="center" style="border-bottom: 1px solid black">
+<font size="+1">
+<b>
+Every Number Counter
+</b>
+</font>
+</td>
+<tr>
+
+<tr width="500">
+<td width="250" align="center">
+Start:
+</td>
+<td>
+<input type="text" id="everyNumberOne">
+</td>
+<tr>
+
+<tr width="500">
+<td width="250" align="center">
+Stop:
+</td>
+<td>
+<input type="text" id="everyNumberTwo">
+</td>
+</tr>
+
+<tr>
+<td colspan="2" align="center">
+<button type="button" onClick="one()">
+Submit
+</button>
+</td>
+</tr>
+
+</table>
+
+<p id="answerOne">
+</p>
+
+</body>
+
+
+<body>
+
+<table border="0" align="center" cellpadding="3">
+
+<tr>
+<td colspan="2" align="center" style="border-bottom: 1px solid black">
+<font size="+1">
+<b>
+Even Number Counter
+</b>
+</font>
+</td>
+</tr>
+
+<tr width="500">
+<td width="250" align="center">
+Start:
+</td>
+<td>
+<input type="text" id="evenNumberOne">
+</td>
+</tr>
+
+<tr width="500">
+<td width="250" align="center">
+Stop:
+</td>
+<td>
+<input type="text" id="evenNumberTwo">
+</td>
+</tr>
+
+<tr>
+<td colspan="2" align="center">
+<button type="button" onClick="two()">
+Submit
+</button>
+</td>
+</tr>
+
+</table>
+
+<p id="answerTwo">
+</p>
+
+</body>
+
+
+<body>
+
+<table border="0" align="center" cellpadding="3">
+<tr>
+<td colspan="2" align="center" style="border-bottom: 1px solid black">
+<font size="+1">
+<b>
+High/low Counter
+</b>
+</font>
+</td>
+</tr>
+
+<tr width="500">
+<td width="250" align="center">
+Start:
+</td>
+<td>
+<input type="text" id="highNumberOne">
+</td>
+<tr>
+
+<tr width="500">
+<td width="250" align="center">
+Stop:
+</td>
+<td>
+<input type="text" id="highNumberTwo">
+</td>
+</tr>
+
+<tr>
+<td colspan="2" align="center">
+<button type="button" onClick="three()">
+Submit
+</button>
+</td>
+</tr>
+
+</table>
+
+<p id="answerThree">
+</p>
+
+</body>
+
+
+<body>
+
+<h1>
+Sum Loops
+</h1>
+
+
+<table border="0" align="center" cellpadding="3">
+<tr>
+<td colspan="2" align="center" style="border-bottom: 1px solid black">
+<font size="+1">
+<b>
+Sum Between
+</b>
+</font>
+</td>
+</tr>
+
+<tr width="500">
+<td width="250" align="center">
+Start:
+</td>
+<td>
+<input type="text" id="sumNumberOne">
+</td>
+</tr>
+
+<tr width="500">
+<td width="250" align="center">
+Stop:
+</td>
+<td>
+<input type="text" id="sumNumberTwo">
+</td>
+</tr>
+
+<tr>
+<td colspan="2" align="center">
+<button type="button" onClick="four()">
+Submit
+</button>
+</td>
+</tr>
+
+</table>
+
+<p id="answerFour">
+</p>
+
+</body>
+
+
+<body>
+
+<h1>
+Num Loops
+</h1>
+
+<table border="0" align="center" cellpadding="3">
+
+<tr>
+<td colspan="2" align="center" style="border-bottom: 1px solid black">
+<font size="+1">
+<b>
+Count words
+</b>
+</font>
+</td>
+</tr>
+
+<tr width="500">
+<td width="250" align="center">
+Sentence:
+</td>
+<td>
+<input type="input" id="wordNumberOne">
+</td>
+</tr>
+
+<tr>
+<td colspan="2" align="center">
+<button type="button" onClick="five()">
+Submit
+</button>
+</td>
+</tr>
+
+</table>
+
+<p id="answerFive">
+</p>
+
+</body>
+
+
+</html>

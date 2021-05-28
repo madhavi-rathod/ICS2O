@@ -1,0 +1,62 @@
+<html>
+
+
+<title>
+Functions One
+</title>
+
+
+<style>
+
+body {text-align: center;}
+
+</style>
+
+
+<head>
+
+<script>
+
+function circleArea (rad) {
+
+const pi = 3.14;
+
+var answer = pi*rad**2;
+
+document.getElementById("answer").innerHTML = "Your area is " + answer;
+}
+
+</script>
+
+</head>
+
+
+<body>
+
+<h1>
+Circle area calculator
+</h1>
+
+<p>
+Please enter a radius to find the area of the circle
+</p>
+
+<br>
+
+<form>
+
+<input type="text" id="radius">
+
+<button type="button" onClick="circleArea (document.getElementById('radius').value)">
+Find the area
+</button>
+
+</form>
+
+<p id="answer">
+</p>
+
+</body>
+
+
+</html>

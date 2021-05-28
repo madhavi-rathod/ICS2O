@@ -1,0 +1,94 @@
+<html>
+
+
+<title>
+Selection Two
+</title>
+
+
+<style>
+
+body {text-align: center;
+font-family: calibri;}
+
+div.eight-ball {background-color: black;
+border: 1px solid black;
+border-radius: 50%;
+width: 300px;
+height: 300px;
+margin: 0 auto;
+margin-bottom: 30px;
+margin-top: 30px;}
+
+div.answer {background-color: grey;
+border: 1px solid grey;
+border-radius: 50%;
+width: 50%;
+height: 50%;
+margin: 25% auto;}
+
+p#eight {font-size: 75;
+margin: 20% auto;
+color: white;}
+
+</style>
+
+
+<head>
+
+<script>
+
+var answers =["Definitely", "It is certain", "Signs point to yes", "Ask againg later", "Cannot predict now", "Don't count on it", "My reply is no", "Very doubtful"];
+
+window.onload = function() {
+var eight = document.getElementById("eight");
+var answer = document.getElementById("answer");
+var eightball = document.getElementById("eight-ball");
+var question = document.getElementById("question");
+      
+eightball.addEventListener("click", function() {
+if (question.value.length < 1) {
+alert('Enter a question!');
+} else {
+eight.innerText = "";
+var num = Math.floor(Math.random() * Math.floor(answers.length));
+answer.innerText = answers[num];
+}
+});
+};
+
+</script>
+
+</head>
+
+
+<body>
+
+<h1>
+Welcome to the Magic 8 Ball
+</h1>
+
+<p>
+Ask about what you would like to know and then click on the 8 Ball
+</p>
+
+<input type="text" id="question">
+
+<div id="eight-ball" class="eight-ball">
+<div class="answer">
+
+<p id="eight" valign="center">
+8
+</p>
+
+<p id="answer">
+</p>
+
+</div>
+</div>
+
+
+</body>
+
+
+</html>

@@ -1,0 +1,276 @@
+<html>
+
+
+<title>
+Function Four
+</title>
+
+
+<style>
+
+body {text-align: center;}
+
+</style>
+
+<head>
+
+<script>
+
+function recArea () {
+
+var width = document.getElementById("recAreaWidth").value;
+var length = document.getElementById("recAreaLength").value;
+var answer = width * length;
+
+document.getElementById("recAreaAnswer").innerHTML = "Your area is " + answer;
+
+}
+
+function recPerimeter () {
+
+var width = document.getElementById("recPerimeterWidth").value;
+var length = document.getElementById("recPerimeterLength").value;
+var answer = width * 2 + length * 2;
+
+document.getElementById("recPerimeterAnswer").innerHTML = "Your perimeter is " + answer;
+
+}
+
+function triArea () {
+
+var base = document.getElementById("triAreaBase").value;
+var height = document.getElementById("triAreaHeight").value;
+var answer = (base * height) / 2;
+
+document.getElementById("triAreaAnswer").innerHTML = "Your area is " + answer;
+
+}
+
+function triPerimeter () {
+
+var sideOne = document.getElementById("sideOne").value;
+var sideTwo = document.getElementById("sideTwo").value;
+var sideThree = document.getElementById("sideThree").value;
+var answer = (sideOne + sideTwo + sideThree);
+
+document.getElementById("triPerimeterAnswer").innerHTML = "Your perimeter is " + answer;
+
+}
+
+
+
+</script>
+
+</head>
+
+
+<body>
+
+<h1>
+Area and Perimeter Calculator
+</h1>
+
+<p>
+Please enter values and select the calculation you would like to do
+</p>
+
+<form>
+
+<table border="0" align="center" cellpadding="3">
+
+<tr>
+<td colspan="2" align="center" style="border-bottom: 1px solid black;">
+<b>
+<font size="+1">
+Area of a Rectangle
+</font>
+</b>
+</td>
+</tr>
+
+<tr width="500">
+<td width="250" align="center">
+Width
+</td>
+<td>
+<input type="text" id="recAreaWidth">
+</td>
+</tr>
+
+<tr width="500">
+<td width="250" align="center">
+Length
+</td>
+<td>
+<input type="text" id="recAreaLength">
+</td>
+</tr>
+
+<tr>
+<td colspan="2" align="center">
+<button type="button" onClick="recArea ()">
+Calculate Area
+</button>
+</td>
+</tr>
+
+</table>
+
+</form>
+
+<p id="recAreaAnswer">
+</p>
+
+<form>
+
+<table border="0" align="center" cellpadding="3">
+
+<tr>
+<td colspan="2" align="center" style="border-bottom: 1px solid black;">
+<b>
+<font size="+1">
+Perimeter of a Rectangle
+</font>
+</b>
+</td>
+</tr>
+
+<tr width="500">
+<td width="250" align="center">
+Width
+</td>
+<td>
+<input type="text" id="recPerimeterWidth">
+</td>
+</tr>
+
+<tr width="500">
+<td width="250" align="center">
+Length
+</td>
+<td>
+<input type="text" id="recPerimeterLength">
+</td>
+</tr>
+
+<tr>
+<td colspan="2" align="center">
+<button type="button" onClick="recPerimeter ()">
+Calculate Perimeter
+</button>
+</td>
+</tr>
+
+</table>
+
+</form>
+
+<p id="recPerimeterAnswer">
+</p>
+
+<form>
+
+<table border="0" align="center" cellpadding="3">
+
+<tr>
+<td colspan="2" align="center" style="border-bottom: 1px solid black;">
+<b>
+<font size="+1">
+Area of a Triangle
+</font>
+</b>
+</td>
+</tr>
+
+<tr width="500">
+<td width="250" align="center">
+Base
+</td>
+<td>
+<input type="text" id="triAreaBase">
+</td>
+</tr>
+
+<tr width="500">
+<td width="250" align="center">
+Height
+</td>
+<td>
+<input type="text" id="triAreaHeight">
+</td>
+</tr>
+
+<tr>
+<td colspan="2" align="center">
+<button type="button" onClick="triArea ()">
+Calculate Area
+</button>
+</td>
+</tr>
+
+</table>
+
+</form>
+
+<p id="triAreaAnswer">
+</p>
+
+<form>
+
+<table border="0" align="center" cellpadding="3">
+
+<tr>
+<td colspan="2" align="center" style="border-bottom: 1px solid black;">
+<b>
+<font size="+1">
+Perimeter of a Triangle
+</font>
+</b>
+</td>
+</tr>
+
+<tr width="500">
+<td width="250" align="center">
+Length of Side One
+</td>
+<td>
+<input type="text" id="sideOne">
+</td>
+
+<tr width="500">
+<td width="250" align="center">
+Length of Side Two
+</td>
+<td>
+<input type="text" id="sideTwo">
+</td>
+</tr>
+
+<tr width="500">
+<td width="250" align="center">
+Length of Side Three
+</td>
+<td>
+<input type="text" id="sideThree">
+</td>
+</tr>
+
+<tr>
+<td colspan="2" align="center">
+<button type="button" onClick="triPerimeter ()">
+Calculate Perimeter
+</button>
+</td>
+</tr>
+
+</table>
+
+</form>
+
+<p id="triPerimeterAnswer">
+</p>
+
+</body>
+
+
+</html>

@@ -1,0 +1,62 @@
+<html>
+
+
+<title>
+Selection Four
+</title>
+
+
+<style>
+
+body {text-align: center;}
+
+</style>
+
+
+<head>
+
+<script>
+
+function leap () {
+
+var year = document.getElementById("year").value;
+
+if ((year % 4 == 0) && (year % 100 != 0) || (year % 400 == 0)) {
+document.getElementById("result").innerHTML = "This is a leap year";
+}
+
+else if (year) {
+document.getElementById("result").innerHTML = "This is not a leap year";
+}
+
+}
+</script>
+
+</head>
+
+
+<body>
+
+<h1>
+Leap Years
+</h1>
+
+<p>
+Please enter a year to see if it is a leap year
+</p>
+
+<form>
+
+<input type="text" id="year">
+
+<input type="button" value="Calculate" onclick="leap ()">
+
+</form>
+
+<p id="result">
+</p>
+
+</body>
+
+
+</html>

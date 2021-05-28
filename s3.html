@@ -1,0 +1,166 @@
+<html>
+
+
+<title>
+Selection Three
+</title>
+
+
+<style>
+
+body {text-align: center;}
+
+</style>
+
+
+<head>
+
+<script>
+
+function sign () {
+
+var month = document.getElementById("month").value;
+var date = document.getElementById("date").value;
+
+if (month<2 && date>19 || month<3 && month>1 && date<19) {
+document.getElementById("result").innerHTML = "You are an Aquarius" + '<br> <img src="s3images/aquarius.jpg" height="100" width="100">'
+}
+
+else if (month<3 && month>1 && date>18 || month<4 && month>2 && date<21) {
+document.getElementById("result").innerHTML = "You are a Pisces" + '<br> <img src="s3images/pisces.jpg" height="100" width="100">';
+}
+
+else if (month<4 && month>2 && date>20 || month<5 && month>3 && date<20) {
+document.getElementById("result").innerHTML = "You are an Aries" + '<br> <img src="s3images/aries.png" height="100" width="100">';
+}
+
+else if (month<5 && month>3 && date>19 || month<6 && month>4 && date<21) {
+document.getElementById("result").innerHTML = "You are a Taurus" + '<br> <img src="s3images/tarus.jpg" height="100" width="100">';
+}
+
+else if (month<6 && month>4 && date>20 || month<7 && month>5 && date<21) {
+document.getElementById("result").innerHTML = "You are a Gemini" + '<br> <img src="s3images/gemini.png" height="100" width="100">';
+}
+
+else if (month<7 && month>5 && date>20 || month<8 && month>6 && date<23) {
+document.getElementById("result").innerHTML = "You are a Cancer" + '<br> <img src="s3images/cancer.jpg" height="100" width="150">';
+}
+
+else if (month<8 && month>6 && date>22 || month<9 && month>7 && date<23) {
+document.getElementById("result").innerHTML = "You are a Leo" + '<br> <img src="s3images/leo.png" height="150" width="110">';
+}
+
+else if (month<9 && month>7 && date>22 || month<10 && month>8 && date<23) {
+document.getElementById("result").innerHTML = "You are a Virgo" + '<br> <img src="s3images/virgo.png" height="100" width="100">';
+}
+
+else if (month<10 && month>8 && date>22 || month<11 && month>9 && date<23) {
+document.getElementById("result").innerHTML = "You are a Libra" + '<br> <img src="s3images/libra.jpg" height="100" width="100">';
+}
+
+else if (month<11 && month>9 && date>22 || month<12 && month>10 && date<22) {
+document.getElementById("result").innerHTML = "You are a Scorpio" + '<br> <img src="s3images/scorpio.png" height="100" width="100">';
+}
+
+else if (month<12 && month>10 && date>21 || month>11 && date<22) {
+document.getElementById("result").innerHTML = "You are a Sagittarius" + '<br> <img src="s3images/sagittarius.png" height="100" width="100">';
+}
+
+else if (month>11 && date>21 || month<2 && date<20) {
+document.getElementById("result").innerHTML = "You are a Capricorn" + '<br> <img src="s3images/capricorn.png" height="100" width="100">';
+}
+}
+
+</script>
+
+</head>
+
+<body>
+
+<h1>
+Zodiac Sign
+</h1>
+
+<br>
+
+<form>
+
+<table border="0" align="center">
+
+<tr width="500">
+<td width="250" align="center">
+Month
+</td>
+<td>
+<select name="Month" value="January" style="width: 200px;" id="month">
+<option value="1"> January </option>
+<option value="2"> Febuary </option>
+<option value="3"> March </option>
+<option value="4"> April </option>
+<option value="5"> May </option>
+<option value="6"> June </option>
+<option value="7"> July </option>
+<option value="8"> August </option>
+<option value="9"> September</option>
+<option value="10"> October </option>
+<option value="11"> November</option>
+<option value="12"> December </option>
+</select>
+</td>
+</tr>
+
+<tr width="500">
+<td width="250" align="center">
+Date
+</td>
+<td>
+<select name="date" value="1" style="width: 200px;" id="date">
+<option value="1"> 1 </option>
+<option value="2"> 2 </option>
+<option value="3"> 3 </option>
+<option value="4"> 4 </option>
+<option value="5"> 5 </option>
+<option value="6"> 6 </option>
+<option value="7"> 7 </option>
+<option value="8"> 8 </option>
+<option value="9"> 9 </option>
+<option value="10"> 10 </option>
+<option value="11"> 11 </option>
+<option value="12"> 12 </option>
+<option value="13"> 13 </option>
+<option value="14"> 14 </option>
+<option value="15"> 15 </option>
+<option value="16"> 16 </option>
+<option value="17"> 17 </option>
+<option value="18"> 18 </option>
+<option value="19"> 19 </option>
+<option value="20"> 20 </option>
+<option value="21"> 21 </option>
+<option value="22"> 22 </option>
+<option value="23"> 23 </option>
+<option value="24"> 24 </option>
+<option value="25"> 25 </option>
+<option value="26"> 26 </option>
+<option value="27"> 27 </option>
+<option value="28"> 28 </option>
+<option value="29"> 29 </option>
+<option value="30"> 30 </option>
+<option value="31"> 31 </option>
+</select>
+</td>
+</tr>
+</table>
+
+<p align="center">
+<input type="button" value="Find Your Sign" onclick="sign ()">
+</p>
+
+<p id="result">
+</p>
+
+</form>
+
+</body>
+
+
+</html>

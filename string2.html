@@ -1,0 +1,81 @@
+<html>
+
+
+<title>
+String Two
+</title>
+
+
+<style>
+
+body {text-align: center;}
+
+</style>
+
+
+<head>
+
+<script>
+
+function submit() {
+
+var word = document.getElementById("text").value;
+var search = document.getElementById("search").value;
+var look = word.indexOf(search);
+var lookEnd = word.lastIndexOf(search);
+var length = word.length;
+
+document.getElementById("long").innerHTML = "Your word is " + length + " characters long";
+document.getElementById("answer").innerHTML = "The first value of your substring occurs at " + look;
+document.getElementById("answerAgain").innerHTML = "The last value of your substring occurs at " + lookEnd;
+
+}
+
+
+</script>
+
+</head>
+
+
+<body>
+
+<h1>
+Please fill out the following
+</h1>
+
+
+Please enter a word:
+
+<br>
+
+<input type="text" id="text">
+
+<br>
+<br>
+
+Search:
+
+<br>
+
+<input type="text" id="search">
+
+<br>
+<br>
+
+<button type="button" onclick="submit()">
+Submit
+</button>
+
+<p id="long">
+</p>
+
+<p id="answer">
+</p>
+
+<p id="answerAgain">
+</p>
+
+</body>
+
+
+</html>

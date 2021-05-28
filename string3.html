@@ -1,0 +1,82 @@
+<html>
+
+
+<title>
+String Three
+</title>
+
+
+<style>
+
+body {text-align: center;}
+
+</style>
+
+
+<head>
+
+<script>
+
+function submit () {
+
+var word = document.getElementById("word").value;
+var search = document.getElementById("substring").value;
+var first = word.indexOf(search);
+var replacement = "t";
+var result = replaceChar(word, replacement, first);
+
+document.getElementById("answer").innerHTML = result;
+
+
+}
+
+function replaceChar (origString, replaceChar, index) {
+
+let newStringArray = origString.slpit("");
+newStringArray[index] = replaceChar;
+let newString = newStringArray.join("");
+return newString;
+}
+
+
+</script>
+
+</head>
+
+
+<body>
+
+<h1>
+Please fill out the following:
+</h1>
+
+Please enter a word:
+
+<br>
+
+<input type="text" id="word">
+
+<br>
+<br>
+
+Search:
+
+<br>
+
+<input type="text" id="substring">
+
+<br>
+<br>
+
+<button type="button" onclick="submit()">
+Submit
+</button>
+
+<p id="answer">
+</p>
+
+
+</body>
+
+
+</html>

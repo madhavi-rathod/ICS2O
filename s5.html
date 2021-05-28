@@ -1,0 +1,92 @@
+<html>
+
+
+<title>
+Selection Five
+</title>
+
+
+<style>
+
+body {text-align: center;}
+
+</style>
+
+
+<head>
+
+<script>
+
+var number2 = Math.floor(10 * Math.random() +1);
+var count= 0;
+
+document.onload = function () {
+
+}
+
+function random () {
+
+if (count>2) {
+document.write("Your guesses are over");
+}
+
+else {
+
+var number1 = document.getElementById("number1").value;
+
+if (number1 == number2) {
+
+if (count == 0) {
+points = 100;
+}
+
+else if (count == 1) {
+points= 50;
+}
+
+else if (count == 2) {
+points= 25;
+}
+
+document.getElementById("result").innerHTML = "You have guessed the random number, congratulations! You have earned " + points + " points";
+}
+
+else if (number1>number2) {
+document.getElementById("result").innerHTML = "The random number is too high";
+}
+
+else if (number1<number2) {
+document.getElementById("result").innerHTML = "The random number is too low";
+}
+
+count++;}
+}
+
+</script>
+
+</head>
+
+<body>
+
+<h1>
+Welcome to the Higher-Lower Guessing Game
+</h1>
+
+<p>
+Please guess a number from 1-10
+</p>
+
+<input type="text" id="number1">
+
+<p align="center">
+<input type="button" value="Submit" onClick="random ()">
+</p>
+
+<p id="result">
+</p>
+
+
+</body>
+
+
+</html>
